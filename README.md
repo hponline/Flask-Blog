@@ -1,6 +1,6 @@
 # Proje Adı - Python Flask Web-Blog
 
-Projenin Amacı: Kullanıcıların makale oluşturmasına, okumasına, güncellemesine ve silmesine olanak tanıyan bir web uygulamasıdır. 
+<h2> Projenin Amacı: </h2> Kullanıcıların makale oluşturmasına, okumasına, güncellemesine ve silmesine olanak tanıyan bir web uygulamasıdır. 
 Ayrıca kullanıcı kayıt, giriş, kimlik doğrulama de içerir. Web sitesi yanıt verir ve tüm cihazlarda iyi görünür.
 
 <h4>Teknik Detaylar:</h4>
