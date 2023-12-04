@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="text-center">
+    <h3>ABlock Sitesine Hoşgeldiniz....</h3>
+    
+</div>
+<div class="tarih">
+    <p align="right">{{ current_datetime }}</p>
+</div>
+
+
+
+<div class="article-container mt-4">
+    <div class="row">
+        {% for article in articles %}
+            <div class="col-md-4">
+                <div class="article-card">
+                    <div class="card-content">
+                        <h5 class="card-title">{{ article['title'] }}</h5>
+                        <p class="card-author">{{ article['author'] }}</p>
+                        <p class="card-content-text">{{ article['content'] | safe }}</p>
+                    </div>
+                    <a href="{{ url_for('article', id=article['id']) }}" class="btn btn-primary">Makaleye Git</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+
+<style>
+.article-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.article-card {
+    position: relative;
+    border: 1px solid #eee;
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.article-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-author {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.card-content-text {
+    color: #777;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    max-height: 3.6em;
+}
+
+.btn {
+    width: 100%;
+    padding: 8px 16px;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+  
+</style>
+
+{% endblock body %}
+
