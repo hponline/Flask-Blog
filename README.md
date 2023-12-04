@@ -59,4 +59,5 @@ Kullanıcılar ('users') ve makaleler ('articles') arasındaki ilişki sağland�
 
 Bu proje, Mustafa Murat Coşkun'un Udemy üzerindeki (Python | Sıfırdan İleri Seviye Programlama) Flask derslerine dayanmaktadır. Yaptığım ilk projeyi sizlerle paylaşmak istedim.
 
+https://github.com/hponline/Flask-Blog/assets/143675421/0b8f70a4-374f-4aba-9de3-29df351c526c
 
